@@ -1,0 +1,1502 @@
+[
+  {
+    "patient_name": "Vikram Rao 0",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Vikram Rao 0 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.735619"
+  },
+  {
+    "patient_name": "Priya Singh 1",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Priya Singh 1 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Anjali Verma 2",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 2 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Vikram Rao 3",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Vikram Rao 3 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Rahul Sharma 4",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rahul Sharma 4 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Siddharth Malhotra 5",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Siddharth Malhotra 5 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Rohan Joshi 6",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rohan Joshi 6 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Meera Nair 7",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Meera Nair 7 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Meera Nair 8",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Meera Nair 8 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Kavita Reddy 9",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Kavita Reddy 9 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Meera Nair 10",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Meera Nair 10 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Vikram Rao 11",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Vikram Rao 11 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Priya Singh 12",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Priya Singh 12 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Siddharth Malhotra 13",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Siddharth Malhotra 13 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Priya Singh 14",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Priya Singh 14 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Kavita Reddy 15",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Kavita Reddy 15 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Kavita Reddy 16",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Kavita Reddy 16 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Rahul Sharma 17",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rahul Sharma 17 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Priya Singh 18",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Priya Singh 18 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Vikram Rao 19",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Vikram Rao 19 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Anjali Verma 20",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 20 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Amit Patel 21",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Amit Patel 21 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Vikram Rao 22",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Vikram Rao 22 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Sneha Gupta 23",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Sneha Gupta 23 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Rahul Sharma 24",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rahul Sharma 24 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Vikram Rao 25",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Vikram Rao 25 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Priya Singh 26",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Priya Singh 26 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Rahul Sharma 27",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rahul Sharma 27 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Sneha Gupta 28",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Sneha Gupta 28 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Kavita Reddy 29",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Kavita Reddy 29 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Rohan Joshi 30",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rohan Joshi 30 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Siddharth Malhotra 31",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Siddharth Malhotra 31 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Priya Singh 32",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Priya Singh 32 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Amit Patel 33",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Amit Patel 33 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Kavita Reddy 34",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Kavita Reddy 34 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Anjali Verma 35",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 35 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Kavita Reddy 36",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Kavita Reddy 36 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Anjali Verma 37",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 37 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Rohan Joshi 38",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rohan Joshi 38 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Anjali Verma 39",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 39 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Vikram Rao 40",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Vikram Rao 40 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Rohan Joshi 41",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rohan Joshi 41 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Meera Nair 42",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Meera Nair 42 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Siddharth Malhotra 43",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Siddharth Malhotra 43 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Vikram Rao 44",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Vikram Rao 44 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Anjali Verma 45",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 45 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Amit Patel 46",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Amit Patel 46 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Meera Nair 47",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Meera Nair 47 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Vikram Rao 48",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Vikram Rao 48 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Kavita Reddy 49",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Kavita Reddy 49 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Priya Singh 50",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Priya Singh 50 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Priya Singh 51",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Priya Singh 51 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Rohan Joshi 52",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rohan Joshi 52 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Rahul Sharma 53",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rahul Sharma 53 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Meera Nair 54",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Meera Nair 54 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Kavita Reddy 55",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Kavita Reddy 55 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Anjali Verma 56",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 56 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Siddharth Malhotra 57",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Siddharth Malhotra 57 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Rohan Joshi 58",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rohan Joshi 58 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Anjali Verma 59",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 59 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Vikram Rao 60",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Vikram Rao 60 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Sneha Gupta 61",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Sneha Gupta 61 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Rahul Sharma 62",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rahul Sharma 62 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Sneha Gupta 63",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Sneha Gupta 63 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Priya Singh 64",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Priya Singh 64 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Meera Nair 65",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Meera Nair 65 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Meera Nair 66",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Meera Nair 66 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Sneha Gupta 67",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Sneha Gupta 67 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Amit Patel 68",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Amit Patel 68 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Amit Patel 69",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Amit Patel 69 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Priya Singh 70",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Priya Singh 70 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Anjali Verma 71",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 71 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Rahul Sharma 72",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rahul Sharma 72 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.736617"
+  },
+  {
+    "patient_name": "Siddharth Malhotra 73",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Siddharth Malhotra 73 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Rahul Sharma 74",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rahul Sharma 74 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Meera Nair 75",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Meera Nair 75 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Sneha Gupta 76",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Sneha Gupta 76 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Amit Patel 77",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Amit Patel 77 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Siddharth Malhotra 78",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Siddharth Malhotra 78 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Rohan Joshi 79",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rohan Joshi 79 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Rahul Sharma 80",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rahul Sharma 80 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Sneha Gupta 81",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Sneha Gupta 81 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Anjali Verma 82",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 82 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Amit Patel 83",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Amit Patel 83 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Anjali Verma 84",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 84 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Siddharth Malhotra 85",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Siddharth Malhotra 85 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Anjali Verma 86",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 86 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Priya Singh 87",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Priya Singh 87 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Vikram Rao 88",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Vikram Rao 88 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Rahul Sharma 89",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rahul Sharma 89 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Anjali Verma 90",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 90 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Sneha Gupta 91",
+    "possible_condition": "Asthma",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Asthma protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Sneha Gupta 91 shows signs of Asthma.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Kavita Reddy 92",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Kavita Reddy 92 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Sneha Gupta 93",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Sneha Gupta 93 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Anjali Verma 94",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Anjali Verma 94 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Vikram Rao 95",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Vikram Rao 95 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Rahul Sharma 96",
+    "possible_condition": "Common Cold",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Common Cold protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Rahul Sharma 96 shows signs of Common Cold.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Kavita Reddy 97",
+    "possible_condition": "Hypertension",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Hypertension protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Kavita Reddy 97 shows signs of Hypertension.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Siddharth Malhotra 98",
+    "possible_condition": "Migraine",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Migraine protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Siddharth Malhotra 98 shows signs of Migraine.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  },
+  {
+    "patient_name": "Priya Singh 99",
+    "possible_condition": "Diabetes Mellitus",
+    "suggested_tests": [
+      "General Checkup",
+      "Blood Test"
+    ],
+    "dosage_recommendation": "Standard Diabetes Mellitus protocol",
+    "precautionary_measures": [
+      "Rest",
+      "Monitor Vitals"
+    ],
+    "ai_analysis_summary": "Automated analysis for Priya Singh 99 shows signs of Diabetes Mellitus.",
+    "timestamp": "2026-01-17T07:20:51.737617"
+  }
+]

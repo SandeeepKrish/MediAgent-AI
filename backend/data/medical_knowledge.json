@@ -1,0 +1,421 @@
+[
+  {
+    "condition": "Common Cold",
+    "symptoms": [
+      "cough",
+      "runny nose",
+      "sore throat",
+      "mild fever",
+      "sneezing",
+      "congestion"
+    ],
+    "tests": [
+      "Physical examination"
+    ],
+    "dosage": "Paracetamol 500mg for fever, Cetirizine 10mg for runny nose",
+    "precautions": [
+      "Drink warm fluids",
+      "Rest",
+      "Steam inhalation",
+      "Stay warm"
+    ]
+  },
+  {
+    "condition": "Tension Headache",
+    "symptoms": [
+      "headache",
+      "pressure across forehead",
+      "neck pain",
+      "scalp tenderness"
+    ],
+    "tests": [
+      "Physical exam",
+      "Neurological exam"
+    ],
+    "dosage": "Ibuprofen 400mg or Aspirin (as per weight)",
+    "precautions": [
+      "Manage stress",
+      "Improve posture",
+      "Adequate sleep",
+      "Reduce screen time"
+    ]
+  },
+  {
+    "condition": "Migraine",
+    "symptoms": [
+      "throbbing headache",
+      "nausea",
+      "sensitivity to light",
+      "sensitivity to sound",
+      "aura",
+      "vomiting"
+    ],
+    "tests": [
+      "Neurological exam",
+      "MRI (if severe/chronic)"
+    ],
+    "dosage": "Sumatriptan 50mg or Naproxen 500mg",
+    "precautions": [
+      "Avoid triggers (caffeine, bright lights)",
+      "Stay in dark room",
+      "Manage stress"
+    ]
+  },
+  {
+    "condition": "Influenza (Flu)",
+    "symptoms": [
+      "high fever",
+      "chills",
+      "muscle aches",
+      "severe fatigue",
+      "dry cough",
+      "headache"
+    ],
+    "tests": [
+      "Rapid Flu Test",
+      "Nasopharyngeal swab"
+    ],
+    "dosage": "Oseltamivir 75mg (TamiFlu) if caught early, Fluids, Paracetamol",
+    "precautions": [
+      "Bed rest",
+      "Isolate to prevent spread",
+      "High fluid intake"
+    ]
+  },
+  {
+    "condition": "Dengue Fever",
+    "symptoms": [
+      "high fever",
+      "severe joint pain",
+      "muscle pain",
+      "rash",
+      "pain behind eyes",
+      "headache"
+    ],
+    "tests": [
+      "Dengue NS1 Antigen test",
+      "CBC (Platelet count)",
+      "IgM/IgG antibodies"
+    ],
+    "dosage": "Paracetamol only (Avoid Aspirin/Ibuprofen due to bleeding risk), IV fluids",
+    "precautions": [
+      "Mosquito protection",
+      "Complete bed rest",
+      "Monitor platelet counts",
+      "Papaya leaf extract (consult doctor)"
+    ]
+  },
+  {
+    "condition": "Malaria",
+    "symptoms": [
+      "fever with chills",
+      "sweating",
+      "headache",
+      "nausea",
+      "vomiting",
+      "body ache"
+    ],
+    "tests": [
+      "Peripheral Smear for MP",
+      "Rapid Diagnostic Test (RDT)"
+    ],
+    "dosage": "Chloroquine or Artemisinin-based combination therapy (ACT)",
+    "precautions": [
+      "Mosquito nets",
+      "Eliminate stagnant water",
+      "Full sleeve clothing"
+    ]
+  },
+  {
+    "condition": "Typhoid Fever",
+    "symptoms": [
+      "prolonged fever",
+      "stomach pain",
+      "diarrhea",
+      "constipation",
+      "rose spots on chest",
+      "weakness"
+    ],
+    "tests": [
+      "Widal Test",
+      "Blood Culture",
+      "TyphiDot"
+    ],
+    "dosage": "Ceftriaxone or Azithromycin (Prescription only)",
+    "precautions": [
+      "Drink boiled water",
+      "Avoid street food",
+      "Hand hygiene",
+      "High calorie liquid diet"
+    ]
+  },
+  {
+    "condition": "Gastroenteritis (Stomach Flu)",
+    "symptoms": [
+      "stomach cramps",
+      "watery diarrhea",
+      "vomiting",
+      "nausea",
+      "low-grade fever"
+    ],
+    "tests": [
+      "Stool culture",
+      "Physical exam"
+    ],
+    "dosage": "ORS (Oral Rehydration Solution), Loperamide (if severe), Probiotics",
+    "precautions": [
+      "Stay hydrated",
+      "Brat diet (Bananas, Rice, Applesauce, Toast)",
+      "Hand washing"
+    ]
+  },
+  {
+    "condition": "Urinary Tract Infection (UTI)",
+    "symptoms": [
+      "burning urination",
+      "frequent urge to urinate",
+      "cloudy urine",
+      "lower abdominal pain"
+    ],
+    "tests": [
+      "Urine Routine & Microscopy",
+      "Urine Culture"
+    ],
+    "dosage": "Nitrofurantoin or Fosfomycin (Consult doctor)",
+    "precautions": [
+      "Drink plenty of water",
+      "Maintain hygiene",
+      "Cranberry juice (preventive)"
+    ]
+  },
+  {
+    "condition": "Hypertension",
+    "symptoms": [
+      "headache",
+      "shortness of breath",
+      "nosebleeds",
+      "dizziness",
+      "chest pain",
+      "high bp"
+    ],
+    "tests": [
+      "Blood pressure monitoring",
+      "ECG",
+      "Kidney function test"
+    ],
+    "dosage": "Amlodipine 5mg or Telmisartan 40mg (Prescription required)",
+    "precautions": [
+      "Low salt diet (DASH diet)",
+      "Daily walking",
+      "Weight management",
+      "No smoking"
+    ]
+  },
+  {
+    "condition": "Diabetes Mellitus",
+    "symptoms": [
+      "excessive thirst",
+      "frequent urination",
+      "unexplained weight loss",
+      "blurred vision",
+      "slow healing wounds"
+    ],
+    "tests": [
+      "HbA1c",
+      "Fasting Blood Sugar",
+      "Oral Glucose Tolerance Test"
+    ],
+    "dosage": "Metformin 500mg or Insulin (as advised by Endocrinologist)",
+    "precautions": [
+      "Sugar-free diet",
+      "Regular exercise",
+      "Foot care",
+      "Regular glucose monitoring"
+    ]
+  },
+  {
+    "condition": "Asthma",
+    "symptoms": [
+      "wheezing",
+      "shortness of breath",
+      "chest tightness",
+      "night cough"
+    ],
+    "tests": [
+      "Spirometry",
+      "Peak Flow Monitoring",
+      "Chest X-ray"
+    ],
+    "dosage": "Salbutamol inhaler (Rescue), Budesonide inhaler (Preventer)",
+    "precautions": [
+      "Identify and avoid triggers (dust, pollen)",
+      "Always carry inhaler",
+      "Keep home dust-free"
+    ]
+  },
+  {
+    "condition": "Acid Reflux (GERD)",
+    "symptoms": [
+      "heartburn",
+      "chest pain",
+      "acid regurgitation",
+      "difficulty swallowing",
+      "sensation of lump in throat"
+    ],
+    "tests": [
+      "Endoscopy (if chronic)",
+      "Barium swallow"
+    ],
+    "dosage": "Pantoprazole 40mg or Antacids (Digene/Gaviscon)",
+    "precautions": [
+      "Avoid spicy/oily food",
+      "Don't lie down after meals",
+      "Eat small frequent meals"
+    ]
+  },
+  {
+    "condition": "Anaemia (Iron Deficiency)",
+    "symptoms": [
+      "extreme fatigue",
+      "pale skin",
+      "shortness of breath",
+      "cold hands and feet",
+      "brittle nails"
+    ],
+    "tests": [
+      "CBC (Hemoglobin levels)",
+      "Serum Ferritin",
+      "Iron studies"
+    ],
+    "dosage": "Ferrous Sulphate/Fumarate tablets, Vitamin C for absorption",
+    "precautions": [
+      "Eat leafy greens",
+      "Red meat or legumes",
+      "Avoid tea/coffee with meals"
+    ]
+  },
+  {
+    "condition": "Sinusitis",
+    "symptoms": [
+      "facial pain",
+      "thick yellow/green mucus",
+      "nasal congestion",
+      "toothache",
+      "fever",
+      "headache"
+    ],
+    "tests": [
+      "Physical exam",
+      "Nasal Endoscopy",
+      "CT Sinus (if chronic)"
+    ],
+    "dosage": "Nasoclear spray, Amoxicillin (if bacterial), Steam inhalation",
+    "precautions": [
+      "Steam inhalation 3x daily",
+      "Warm compress on face",
+      "Sleep with head elevated"
+    ]
+  },
+  {
+    "condition": "Tonsillitis",
+    "symptoms": [
+      "sore throat",
+      "red swollen tonsils",
+      "white patches on tonsils",
+      "swollen neck glands",
+      "difficulty swallowing"
+    ],
+    "tests": [
+      "Throat swab culture",
+      "Physical exam"
+    ],
+    "dosage": "Salt water gargles, Ibuprofen, Amoxicillin-Clavulanate (if bacterial)",
+    "precautions": [
+      "Rest voice",
+      "Warm liquids",
+      "Avoid irritants like smoke"
+    ]
+  },
+  {
+    "condition": "Pneumonia",
+    "symptoms": [
+      "cough with phlegm",
+      "chest pain while breathing",
+      "shortness of breath",
+      "high fever",
+      "fatigue"
+    ],
+    "tests": [
+      "Chest X-ray",
+      "Pulse Oximetry",
+      "Sputum test"
+    ],
+    "dosage": "Antibiotics (Levofloxacin/Azithromycin), Cough suppressants",
+    "precautions": [
+      "Chest physiotherapy",
+      "Fluid intake",
+      "Hospitalization if O2 is low"
+    ]
+  },
+  {
+    "condition": "Chikungunya",
+    "symptoms": [
+      "severe joint pain",
+      "fever",
+      "rash",
+      "muscle pain",
+      "headache",
+      "nausea"
+    ],
+    "tests": [
+      "ELISA test for IgM antibodies"
+    ],
+    "dosage": "Naproxen for joint pain, Paracetamol for fever",
+    "precautions": [
+      "Joint mobility exercises",
+      "Stay hydrated",
+      "Mosquito control"
+    ]
+  },
+  {
+    "condition": "Conjunctivitis (Pink Eye)",
+    "symptoms": [
+      "redness in eye",
+      "itchiness",
+      "gritty feeling",
+      "discharge that forms crust during night",
+      "tearing"
+    ],
+    "tests": [
+      "Eye examination",
+      "Swab of discharge"
+    ],
+    "dosage": "Antibiotic eye drops (Moxifloxacin), Artificial tears",
+    "precautions": [
+      "Don't touch eyes",
+      "Change pillowcases",
+      "Wash hands frequently",
+      "Avoid sharing towels"
+    ]
+  },
+  {
+    "condition": "Food Poisoning",
+    "symptoms": [
+      "nausea",
+      "vomiting",
+      "watery diarrhea",
+      "abdominal pain",
+      "fever"
+    ],
+    "tests": [
+      "Clinical evaluation",
+      "Stool test"
+    ],
+    "dosage": "ORS, Probiotics, Anti-emetics (Ondansetron)",
+    "precautions": [
+      "Only safe liquids",
+      "Avoid dairy",
+      "Ensure food is fully cooked"
+    ]
+  }
+]

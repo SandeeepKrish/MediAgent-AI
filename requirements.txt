@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+motor
+pydantic
+pydantic-settings
+langchain
+langchain-openai
+python-dotenv
+faiss-cpu
+sentence-transformers
+pymongo
+dnspython
