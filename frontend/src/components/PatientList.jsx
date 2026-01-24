@@ -1,5 +1,23 @@
 import React from 'react'
 import { User, ChevronRight, Calendar, Heart, Thermometer, Activity } from 'lucide-react'
+import { motion } from 'framer-motion'
+
+function MagnifiedText({ children, className = "" }) {
+    return (
+        <motion.span
+            whileHover={{
+                scale: 1.2,
+                color: "#38bdf8",
+                zIndex: 50,
+                position: "relative"
+            }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className={`inline-block cursor-zoom-in origin-left ${className}`}
+        >
+            {children}
+        </motion.span>
+    )
+}
 
 export default function PatientList({
     patients,
@@ -30,11 +48,13 @@ export default function PatientList({
                                 {patient.name.charAt(0)}
                             </div>
                             <div>
-                                <h4 className="font-bold text-white group-hover:text-sky-400 transition-colors">{patient.name}</h4>
+                                <h4 className="font-bold text-white group-hover:text-sky-400 transition-colors">
+                                    <MagnifiedText>{patient.name}</MagnifiedText>
+                                </h4>
                                 <div className="flex items-center gap-3 text-xs text-slate-400 mt-1">
-                                    <span>{patient.age} years</span>
+                                    <MagnifiedText>{patient.age} years</MagnifiedText>
                                     <span className="w-1 h-1 bg-slate-600 rounded-full" />
-                                    <span className="capitalize">{patient.gender}</span>
+                                    <MagnifiedText className="capitalize">{patient.gender}</MagnifiedText>
                                 </div>
                             </div>
                         </div>
@@ -43,15 +63,15 @@ export default function PatientList({
                             <div className="hidden sm:flex items-center gap-4 text-xs font-medium text-slate-400">
                                 <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5">
                                     <Activity size={12} className="text-sky-400" />
-                                    {patient.bp}
+                                    <MagnifiedText>{patient.bp}</MagnifiedText>
                                 </div>
                                 <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5">
                                     <Thermometer size={12} className="text-rose-400" />
-                                    {patient.temperature}
+                                    <MagnifiedText>{patient.temperature}</MagnifiedText>
                                 </div>
                                 <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5">
                                     <Heart size={12} className="text-emerald-400" />
-                                    {patient.heart_rate}
+                                    <MagnifiedText>{patient.heart_rate}</MagnifiedText>
                                 </div>
                             </div>
 
