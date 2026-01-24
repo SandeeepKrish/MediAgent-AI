@@ -20,6 +20,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
   const [searchQuery, setSearchQuery] = useState('')
+  const [selectedGender, setSelectedGender] = useState('')
 
   useEffect(() => {
     // Fire both immediately for fast loading
@@ -37,12 +38,15 @@ function App() {
   }
 
 
-  const fetchPatients = async (page = 1, search = '') => {
+  const fetchPatients = async (page = 1, search = '', gender = '') => {
     try {
-      const res = await axios.get(`${API_BASE_URL}/patients/?page=${page}&limit=10&search=${search}`)
+      const res = await axios.get(`${API_BASE_URL}/patients/?page=${page}&limit=10&search=${search}&gender=${gender}`)
       setRecentPatients(res.data.patients)
       setTotalPages(res.data.total_pages)
-      setStats(prev => ({ ...prev, total: res.data.total }))
+      // Only update total stats from backend, keep gender filter local for the list
+      if (!gender && !search) {
+        setStats(prev => ({ ...prev, total: res.data.total }))
+      }
     } catch (err) {
       console.error("Failed to fetch patients", err)
     }
@@ -51,7 +55,7 @@ function App() {
   // Use Debounce for searching: updates the list as the user types
   const debouncedSearch = useDebounce((query) => {
     setCurrentPage(1) // Reset to first page on search
-    fetchPatients(1, query)
+    fetchPatients(1, query, selectedGender)
   }, 500)
 
   const handleSearchChange = (e) => {
@@ -59,10 +63,18 @@ function App() {
     debouncedSearch(e.target.value)
   }
 
+  const handleGenderFilter = (gender) => {
+    const newGender = selectedGender === gender ? '' : gender
+    setSelectedGender(newGender)
+    setCurrentPage(1)
+    fetchPatients(1, searchQuery, newGender)
+  }
+
   // Use Throttle for page changes to prevent rapid clicking
   const throttledPageChange = useThrottle((newPage) => {
     if (newPage >= 1 && newPage <= totalPages) {
       setCurrentPage(newPage)
+      fetchPatients(newPage, searchQuery, selectedGender)
     }
   }, 800)
 
@@ -198,15 +210,36 @@ function App() {
             >
               <div className="lg:col-span-2 space-y-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-                  <StatCard title="Total" value={stats.total} icon={<Database className="text-sky-400" />} />
-                  <StatCard title="Male" value={stats.male} icon={<UserPlus className="text-indigo-400" />} />
-                  <StatCard title="Female" value={stats.female} icon={<History className="text-rose-400" />} />
+                  <StatCard
+                    title="Total"
+                    value={stats.total}
+                    icon={<Database className="text-sky-400" />}
+                    isActive={selectedGender === ''}
+                    onClick={() => handleGenderFilter('')}
+                  />
+                  <StatCard
+                    title="Male"
+                    value={stats.male}
+                    icon={<UserPlus className="text-indigo-400" />}
+                    isActive={selectedGender === 'Male'}
+                    onClick={() => handleGenderFilter('Male')}
+                  />
+                  <StatCard
+                    title="Female"
+                    value={stats.female}
+                    icon={<History className="text-rose-400" />}
+                    isActive={selectedGender === 'Female'}
+                    onClick={() => handleGenderFilter('Female')}
+                  />
                   <StatCard title="Critical (BP)" value={stats.critical} icon={<Activity className="text-amber-400" />} color="amber" />
                 </div>
 
                 <section className="glass-morphism rounded-3xl p-6">
                   <div className="flex justify-between items-center mb-6">
-                    <h3 className="text-xl font-bold">Recent Admissions</h3>
+                    <h3 className="text-xl font-bold flex items-center gap-2">
+                      {selectedGender ? `${selectedGender} Patients` : 'Recent Admissions'}
+                      {selectedGender && <span className="text-xs px-2 py-0.5 bg-sky-500/20 text-sky-400 rounded-full">Filtered</span>}
+                    </h3>
                     <button onClick={() => setActiveTab('records')} className="text-sky-400 text-sm hover:underline">View All Records</button>
                   </div>
                   <PatientList
@@ -238,8 +271,20 @@ function App() {
                 <div className="glass-morphism rounded-3xl p-6">
                   <h3 className="text-lg font-bold mb-4">Patient Demographics</h3>
                   <div className="space-y-4">
-                    <ProgressBar label="Male" percentage={(stats.male / stats.total * 100) || 0} color="bg-indigo-500" />
-                    <ProgressBar label="Female" percentage={(stats.female / stats.total * 100) || 0} color="bg-rose-500" />
+                    <ProgressBar
+                      label="Male"
+                      percentage={(stats.male / stats.total * 100) || 0}
+                      color="bg-indigo-500"
+                      onClick={() => handleGenderFilter('Male')}
+                      isFiltered={selectedGender === 'Male'}
+                    />
+                    <ProgressBar
+                      label="Female"
+                      percentage={(stats.female / stats.total * 100) || 0}
+                      color="bg-rose-500"
+                      onClick={() => handleGenderFilter('Female')}
+                      isFiltered={selectedGender === 'Female'}
+                    />
                     <ProgressBar label="Critical BP" percentage={(stats.critical / stats.total * 100) || 0} color="bg-amber-500" />
                   </div>
                 </div>
@@ -337,9 +382,12 @@ function App() {
   )
 }
 
-function ProgressBar({ label, percentage, color }) {
+function ProgressBar({ label, percentage, color, onClick, isFiltered }) {
   return (
-    <div className="space-y-1.5">
+    <div
+      className={`space-y-1.5 cursor-pointer transition-all p-2 rounded-xl ${isFiltered ? 'bg-white/5 ring-1 ring-white/10' : 'hover:bg-white/[0.02]'}`}
+      onClick={onClick}
+    >
       <div className="flex justify-between text-xs font-semibold">
         <span className="text-slate-400 uppercase">{label}</span>
         <span className="text-white">{Math.round(percentage)}%</span>
@@ -370,7 +418,7 @@ function SidebarItem({ icon, label, active, onClick }) {
   )
 }
 
-function StatCard({ title, value, icon, color = "sky" }) {
+function StatCard({ title, value, icon, color = "sky", onClick, isActive }) {
   const colorMap = {
     sky: "border-sky-500/20 bg-sky-500/5",
     amber: "border-amber-500/20 bg-amber-500/5",
@@ -379,7 +427,10 @@ function StatCard({ title, value, icon, color = "sky" }) {
   }
 
   return (
-    <div className={`glass-morphism p-5 rounded-2xl flex flex-col gap-4 border ${colorMap[color] || colorMap.sky}`}>
+    <div
+      onClick={onClick}
+      className={`glass-morphism p-5 rounded-2xl flex flex-col gap-4 border cursor-pointer transition-all ${isActive ? 'ring-2 ring-sky-500/50 border-sky-500/50 scale-[1.02]' : 'hover:scale-105'} ${colorMap[color] || colorMap.sky}`}
+    >
       <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
         {icon}
       </div>
@@ -392,6 +443,7 @@ function StatCard({ title, value, icon, color = "sky" }) {
     </div>
   )
 }
+
 
 function CountUp({ value }) {
   const [displayValue, setDisplayValue] = React.useState(0);
