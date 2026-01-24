@@ -5,7 +5,7 @@ import AIResult from './components/AIResult'
 import PatientList from './components/PatientList'
 import ContactForm from './components/ContactForm'
 import { Activity, LayoutDashboard, Database, BrainCircuit, UserPlus, History, MessageSquare, Search } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useSpring, useTransform, animate } from 'framer-motion'
 import { useDebounce, useThrottle } from './hooks/useUtils'
 
 const API_BASE_URL = 'http://localhost:8000/api'
@@ -22,13 +22,10 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('')
 
   useEffect(() => {
+    // Fire both immediately for fast loading
+    fetchStats()
     fetchPatients(currentPage)
   }, [currentPage])
-
-  useEffect(() => {
-    // Only fetch stats if not already fetched or when a new patient is added
-    fetchStats()
-  }, [])
 
   const fetchStats = async () => {
     try {
@@ -388,10 +385,28 @@ function StatCard({ title, value, icon, color = "sky" }) {
       </div>
       <div>
         <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">{title}</p>
-        <p className="text-2xl font-bold text-white mt-0.5">{value}</p>
+        <div className="text-2xl font-bold text-white mt-0.5">
+          <CountUp value={value} />
+        </div>
       </div>
     </div>
   )
 }
+
+function CountUp({ value }) {
+  const [displayValue, setDisplayValue] = React.useState(0);
+
+  useEffect(() => {
+    const controls = animate(0, value, {
+      duration: 1.5,
+      ease: "easeOut",
+      onUpdate: (latest) => setDisplayValue(Math.floor(latest))
+    });
+    return () => controls.stop();
+  }, [value]);
+
+  return <span>{displayValue}</span>;
+}
+
 
 export default App
