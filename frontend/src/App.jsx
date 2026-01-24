@@ -4,8 +4,9 @@ import PatientForm from './components/PatientForm'
 import AIResult from './components/AIResult'
 import PatientList from './components/PatientList'
 import ContactForm from './components/ContactForm'
-import { Activity, LayoutDashboard, Database, BrainCircuit, UserPlus, History, MessageSquare } from 'lucide-react'
+import { Activity, LayoutDashboard, Database, BrainCircuit, UserPlus, History, MessageSquare, Search } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useDebounce, useThrottle } from './hooks/useUtils'
 
 const API_BASE_URL = 'http://localhost:8000/api'
 
@@ -16,34 +17,57 @@ function App() {
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const [selectedPatient, setSelectedPatient] = useState(null)
   const [stats, setStats] = useState({ total: 0, male: 0, female: 0, critical: 0 })
+  const [currentPage, setCurrentPage] = useState(1)
+  const [totalPages, setTotalPages] = useState(1)
+  const [searchQuery, setSearchQuery] = useState('')
 
   useEffect(() => {
-    fetchPatients()
+    fetchPatients(currentPage)
+  }, [currentPage])
+
+  useEffect(() => {
+    // Only fetch stats if not already fetched or when a new patient is added
+    fetchStats()
   }, [])
 
-  useEffect(() => {
-    calculateStats(recentPatients)
-  }, [recentPatients])
-
-  const calculateStats = (patients) => {
-    const male = patients.filter(p => p.gender === 'Male').length
-    const female = patients.filter(p => p.gender === 'Female').length
-    const critical = patients.filter(p => {
-      if (!p.bp) return false
-      const sys = parseInt(p.bp.split('/')[0])
-      return sys > 140
-    }).length
-    setStats({ total: patients.length, male, female, critical })
+  const fetchStats = async () => {
+    try {
+      const res = await axios.get(`${API_BASE_URL}/patients/stats`)
+      setStats(res.data)
+    } catch (err) {
+      console.error("Failed to fetch stats", err)
+    }
   }
 
-  const fetchPatients = async () => {
+
+  const fetchPatients = async (page = 1) => {
     try {
-      const res = await axios.get(`${API_BASE_URL}/patients/`)
-      setRecentPatients(res.data)
+      const res = await axios.get(`${API_BASE_URL}/patients/?page=${page}&limit=10`)
+      setRecentPatients(res.data.patients)
+      setTotalPages(res.data.total_pages)
+      setStats(prev => ({ ...prev, total: res.data.total }))
     } catch (err) {
       console.error("Failed to fetch patients", err)
     }
   }
+
+  // Use Debounce for searching (though backend search isn't implemented, this shows the technique)
+  const debouncedSearch = useDebounce((query) => {
+    console.log("Searching for:", query)
+    // Here you would call an API with the search query
+  }, 500)
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value)
+    debouncedSearch(e.target.value)
+  }
+
+  // Use Throttle for page changes to prevent rapid clicking
+  const throttledPageChange = useThrottle((newPage) => {
+    if (newPage >= 1 && newPage <= totalPages) {
+      setCurrentPage(newPage)
+    }
+  }, 800)
 
   const handlePatientSubmit = async (patientData) => {
     setIsAnalyzing(true)
@@ -149,6 +173,16 @@ function App() {
           </div>
 
           <div className="flex items-center gap-4">
+            <div className="relative hidden md:block">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" size={18} />
+              <input
+                type="text"
+                placeholder="Search records..."
+                className="pl-10 pr-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm focus:outline-none focus:border-sky-500/50 transition-all w-64"
+                value={searchQuery}
+                onChange={handleSearchChange}
+              />
+            </div>
             <div className="px-4 py-2 glass-morphism rounded-full border border-white/5 flex items-center gap-2">
               <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
               <span className="text-sm font-medium">Agent Active</span>
@@ -178,7 +212,13 @@ function App() {
                     <h3 className="text-xl font-bold">Recent Admissions</h3>
                     <button onClick={() => setActiveTab('records')} className="text-sky-400 text-sm hover:underline">View All Records</button>
                   </div>
-                  <PatientList patients={recentPatients.slice(0, 10)} onViewDetails={viewPatientDetails} />
+                  <PatientList
+                    patients={recentPatients.slice(0, 10)}
+                    onViewDetails={viewPatientDetails}
+                    page={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={throttledPageChange}
+                  />
                 </section>
               </div>
 
@@ -243,9 +283,15 @@ function App() {
             >
               <div className="flex justify-between items-center mb-8">
                 <h3 className="text-2xl font-bold text-white">Clinical Records History</h3>
-                <div className="text-slate-400 text-sm">Showing top {recentPatients.length} latest records</div>
+                <div className="text-slate-400 text-sm">Showing page {currentPage} of {totalPages}</div>
               </div>
-              <PatientList patients={recentPatients} onViewDetails={viewPatientDetails} detailed />
+              <PatientList
+                patients={recentPatients}
+                onViewDetails={viewPatientDetails}
+                page={currentPage}
+                totalPages={totalPages}
+                onPageChange={throttledPageChange}
+              />
             </motion.div>
           )}
 

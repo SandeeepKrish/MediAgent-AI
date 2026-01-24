@@ -45,21 +45,43 @@ async def get_stats(db: AsyncIOMotorDatabase = Depends(get_database)):
     male = await db.patients.count_documents({"gender": "Male"})
     female = await db.patients.count_documents({"gender": "Female"})
     
-    # Critical based on BP (rough estimation in DB)
-    # We can't easily parse "120/80" string in a simple count_documents without regex,
-    # but for this demo, we'll just return the counts we have.
+    # Critical based on BP (approximate search for systolic > 140)
+    # Since BP is stored as a string "120/80", we use a regex to find values > 140
+    # For a production app, we should store numeric values separately.
+    critical = 0
+    async for patient in db.patients.find({}, {"bp": 1}):
+        bp = patient.get("bp", "")
+        if bp and "/" in bp:
+            try:
+                sys = int(bp.split("/")[0])
+                if sys > 140:
+                    critical += 1
+            except:
+                pass
+
     return {
         "total": total,
         "male": male,
-        "female": female
+        "female": female,
+        "critical": critical
     }
 
-@router.get("/", response_model=List[dict])
-async def list_patients(db: AsyncIOMotorDatabase = Depends(get_database)):
-    patients = await db.patients.find().sort("created_at", -1).to_list(1000)
+
+@router.get("/", response_model=dict)
+async def list_patients(page: int = 1, limit: int = 10, db: AsyncIOMotorDatabase = Depends(get_database)):
+    skip = (page - 1) * limit
+    total = await db.patients.count_documents({})
+    patients = await db.patients.find().sort("created_at", -1).skip(skip).limit(limit).to_list(limit)
     for p in patients:
         p["_id"] = str(p["_id"])
-    return patients
+    return {
+        "patients": patients,
+        "total": total,
+        "page": page,
+        "limit": limit,
+        "total_pages": (total + limit - 1) // limit
+    }
+
 
 @router.get("/{patient_id}", response_model=dict)
 async def get_patient_details(patient_id: str, db: AsyncIOMotorDatabase = Depends(get_database)):
