@@ -1,0 +1,17 @@
+<svg width="100" height="100" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Ring -->
+  <circle cx="250" cy="250" r="210" stroke="url(#logo-gradient)" stroke-width="15" stroke-dasharray="40 20" />
+  
+  <!-- Main Cross Shape -->
+  <path d="M250 120V380M120 250H380" stroke="url(#logo-gradient)" stroke-width="60" stroke-linecap="round" />
+  
+  <!-- Central Pulse Line -->
+  <path d="M180 250H210L230 180L270 320L290 250H320" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

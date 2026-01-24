@@ -106,8 +106,8 @@ function App() {
       {/* Sidebar */}
       <aside className="fixed left-0 top-0 h-full w-64 glass-morphism border-r border-white/5 z-50 hidden lg:flex flex-col">
         <div className="p-8 flex items-center gap-3">
-          <div className="w-10 h-10 bg-sky-500 rounded-xl flex items-center justify-center shadow-lg shadow-sky-500/20">
-            <Activity className="text-white" size={24} />
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center">
+            <img src="/favicon.svg" alt="MediAgent AI Logo" className="w-full h-full object-contain" />
           </div>
           <h1 className="text-xl font-bold gradient-text">MediAgent AI</h1>
         </div>
