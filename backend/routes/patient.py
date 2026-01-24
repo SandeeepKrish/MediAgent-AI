@@ -68,7 +68,7 @@ async def get_stats(db: AsyncIOMotorDatabase = Depends(get_database)):
 
 
 @router.get("/", response_model=dict)
-async def list_patients(page: int = 1, limit: int = 10, search: str = "", gender: str = "", db: AsyncIOMotorDatabase = Depends(get_database)):
+async def list_patients(page: int = 1, limit: int = 10, search: str = "", gender: str = "", critical: bool = False, db: AsyncIOMotorDatabase = Depends(get_database)):
     skip = (page - 1) * limit
     
     query = {}
@@ -79,8 +79,14 @@ async def list_patients(page: int = 1, limit: int = 10, search: str = "", gender
     if gender:
         query["gender"] = gender
         
+    if critical:
+        # Regex to find systolic readings > 140 (approximate for string format "120/80")
+        # Matches patterns starting with 14[1-9], 1[5-9][0-9], or digits > 200
+        query["bp"] = {"$regex": "^(14[1-9]|1[5-9][0-9]|[2-9][0-9]{2})/"}
+        
     total = await db.patients.count_documents(query)
     patients = await db.patients.find(query).sort("created_at", -1).skip(skip).limit(limit).to_list(limit)
+
 
     
     for p in patients:

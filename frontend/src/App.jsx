@@ -21,6 +21,7 @@ function App() {
   const [totalPages, setTotalPages] = useState(1)
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedGender, setSelectedGender] = useState('')
+  const [isCriticalFilter, setIsCriticalFilter] = useState(false)
 
   useEffect(() => {
     // Fire both immediately for fast loading
@@ -38,13 +39,13 @@ function App() {
   }
 
 
-  const fetchPatients = async (page = 1, search = '', gender = '') => {
+  const fetchPatients = async (page = 1, search = '', gender = '', critical = false) => {
     try {
-      const res = await axios.get(`${API_BASE_URL}/patients/?page=${page}&limit=10&search=${search}&gender=${gender}`)
+      const res = await axios.get(`${API_BASE_URL}/patients/?page=${page}&limit=10&search=${search}&gender=${gender}&critical=${critical}`)
       setRecentPatients(res.data.patients)
       setTotalPages(res.data.total_pages)
-      // Only update total stats from backend, keep gender filter local for the list
-      if (!gender && !search) {
+      // Only update total stats from backend, keep filters local for the list
+      if (!gender && !search && !critical) {
         setStats(prev => ({ ...prev, total: res.data.total }))
       }
     } catch (err) {
@@ -55,7 +56,7 @@ function App() {
   // Use Debounce for searching: updates the list as the user types
   const debouncedSearch = useDebounce((query) => {
     setCurrentPage(1) // Reset to first page on search
-    fetchPatients(1, query, selectedGender)
+    fetchPatients(1, query, selectedGender, isCriticalFilter)
   }, 500)
 
   const handleSearchChange = (e) => {
@@ -66,15 +67,26 @@ function App() {
   const handleGenderFilter = (gender) => {
     const newGender = selectedGender === gender ? '' : gender
     setSelectedGender(newGender)
+    // Clear critical filter when switching to gender filter
+    setIsCriticalFilter(false)
     setCurrentPage(1)
-    fetchPatients(1, searchQuery, newGender)
+    fetchPatients(1, searchQuery, newGender, false)
+  }
+
+  const handleCriticalFilter = () => {
+    const newCritical = !isCriticalFilter
+    setIsCriticalFilter(newCritical)
+    // Clear gender filter when switching to critical filter
+    setSelectedGender('')
+    setCurrentPage(1)
+    fetchPatients(1, searchQuery, '', newCritical)
   }
 
   // Use Throttle for page changes to prevent rapid clicking
   const throttledPageChange = useThrottle((newPage) => {
     if (newPage >= 1 && newPage <= totalPages) {
       setCurrentPage(newPage)
-      fetchPatients(newPage, searchQuery, selectedGender)
+      fetchPatients(newPage, searchQuery, selectedGender, isCriticalFilter)
     }
   }, 800)
 
@@ -231,14 +243,21 @@ function App() {
                     isActive={selectedGender === 'Female'}
                     onClick={() => handleGenderFilter('Female')}
                   />
-                  <StatCard title="Critical (BP)" value={stats.critical} icon={<Activity className="text-amber-400" />} color="amber" />
+                  <StatCard
+                    title="Critical (BP)"
+                    value={stats.critical}
+                    icon={<Activity className="text-amber-400" />}
+                    color="amber"
+                    isActive={isCriticalFilter}
+                    onClick={handleCriticalFilter}
+                  />
                 </div>
 
                 <section className="glass-morphism rounded-3xl p-6">
                   <div className="flex justify-between items-center mb-6">
                     <h3 className="text-xl font-bold flex items-center gap-2">
-                      {selectedGender ? `${selectedGender} Patients` : 'Recent Admissions'}
-                      {selectedGender && <span className="text-xs px-2 py-0.5 bg-sky-500/20 text-sky-400 rounded-full">Filtered</span>}
+                      {isCriticalFilter ? 'Critical BP Patients' : selectedGender ? `${selectedGender} Patients` : 'Recent Admissions'}
+                      {(selectedGender || isCriticalFilter) && <span className="text-xs px-2 py-0.5 bg-sky-500/20 text-sky-400 rounded-full">Filtered</span>}
                     </h3>
                     <button onClick={() => setActiveTab('records')} className="text-sky-400 text-sm hover:underline">View All Records</button>
                   </div>
@@ -285,7 +304,13 @@ function App() {
                       onClick={() => handleGenderFilter('Female')}
                       isFiltered={selectedGender === 'Female'}
                     />
-                    <ProgressBar label="Critical BP" percentage={(stats.critical / stats.total * 100) || 0} color="bg-amber-500" />
+                    <ProgressBar
+                      label="Critical BP"
+                      percentage={(stats.critical / stats.total * 100) || 0}
+                      color="bg-amber-500"
+                      onClick={handleCriticalFilter}
+                      isFiltered={isCriticalFilter}
+                    />
                   </div>
                 </div>
               </div>
