@@ -51,7 +51,7 @@ export default function PatientList({
                                 <h4 className="font-bold text-white group-hover:text-sky-400 transition-colors">
                                     <MagnifiedText>{patient.name}</MagnifiedText>
                                 </h4>
-                                <div className="flex items-center gap-3 text-xs text-slate-400 mt-1">
+                                <div className="flex items-center gap-3 text-2xl text-slate-400 mt-1">
                                     <MagnifiedText>{patient.age} years</MagnifiedText>
                                     <span className="w-1 h-1 bg-slate-600 rounded-full" />
                                     <MagnifiedText className="capitalize">{patient.gender}</MagnifiedText>
@@ -60,7 +60,7 @@ export default function PatientList({
                         </div>
 
                         <div className="mt-4 md:mt-0 flex items-center gap-6">
-                            <div className="hidden sm:flex items-center gap-4 text-xs font-medium text-slate-400">
+                            <div className="hidden sm:flex items-center gap-4 text-2xl font-medium text-slate-400">
                                 <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5">
                                     <Activity size={12} className="text-sky-400" />
                                     <MagnifiedText>{patient.bp}</MagnifiedText>
@@ -77,8 +77,8 @@ export default function PatientList({
 
                             <div className="flex items-center gap-4">
                                 <div className="text-right hidden lg:block">
-                                    <p className="text-[10px] uppercase text-slate-500 font-bold tracking-widest">Admitted</p>
-                                    <p className="text-xs text-slate-300 font-medium">{new Date(patient.created_at).toLocaleDateString()}</p>
+                                    <p className="text-xl uppercase text-slate-500 font-bold tracking-widest">Admitted</p>
+                                    <p className="text-2xl text-slate-300 font-medium">{new Date(patient.created_at).toLocaleDateString()}</p>
                                 </div>
                                 <ChevronRight className="text-slate-600 group-hover:text-sky-400 group-hover:translate-x-1 transition-all" size={20} />
                             </div>
@@ -93,23 +93,23 @@ export default function PatientList({
                     <button
                         onClick={(e) => { e.stopPropagation(); onPageChange(page - 1); }}
                         disabled={page === 1}
-                        className="px-4 py-2 rounded-xl bg-white/5 text-slate-300 hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all text-sm font-medium"
+                        className="px-4 py-2 rounded-xl bg-white/5 text-slate-300 hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all text-3xl font-medium"
                     >
                         Previous
                     </button>
 
                     <div className="flex items-center gap-2">
-                        <span className="text-xs text-slate-500 font-bold uppercase tracking-widest">Page</span>
-                        <span className="px-3 py-1 rounded-lg bg-sky-500/10 text-sky-400 font-bold text-sm border border-sky-500/20">
+                        <span className="text-2xl text-slate-500 font-bold uppercase tracking-widest">Page</span>
+                        <span className="px-3 py-1 rounded-lg bg-sky-500/10 text-sky-400 font-bold text-3xl border border-sky-500/20">
                             {page}
                         </span>
-                        <span className="text-xs text-slate-500 font-bold uppercase tracking-widest">of {totalPages}</span>
+                        <span className="text-2xl text-slate-500 font-bold uppercase tracking-widest">of {totalPages}</span>
                     </div>
 
                     <button
                         onClick={(e) => { e.stopPropagation(); onPageChange(page + 1); }}
                         disabled={page === totalPages}
-                        className="px-4 py-2 rounded-xl bg-white/5 text-slate-300 hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all text-sm font-medium"
+                        className="px-4 py-2 rounded-xl bg-white/5 text-slate-300 hover:bg-white/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all text-3xl font-medium"
                     >
                         Next
                     </button>

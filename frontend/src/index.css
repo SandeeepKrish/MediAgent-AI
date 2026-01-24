@@ -5,12 +5,19 @@
   --foreground: #f8fafc;
 }
 
+html {
+  font-size: 125%;
+  /* Increases base rem from 16px to 20px */
+}
+
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  line-height: 1.6;
 }
+
 
 .glass-morphism {
   background: rgba(30, 41, 59, 0.7);
@@ -23,8 +30,10 @@ body {
 .gradient-text {
   background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 .hero-pulse {
   position: absolute;

@@ -171,8 +171,8 @@ function App() {
 
         <div className="p-4 mt-auto">
           <div className="p-4 bg-sky-500/10 border border-sky-500/20 rounded-2xl">
-            <p className="text-xs text-sky-400 font-medium mb-1">Database Connected</p>
-            <p className="text-[10px] text-slate-400">MongoDB Atlas: {stats.total} Records</p>
+            <p className="text-xl text-sky-400 font-medium mb-1">Database Connected</p>
+            <p className="text-sm text-slate-400">MongoDB Atlas: {stats.total} Records</p>
           </div>
         </div>
       </aside>
@@ -199,14 +199,14 @@ function App() {
               <input
                 type="text"
                 placeholder="Search records..."
-                className="pl-10 pr-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm focus:outline-none focus:border-sky-500/50 transition-all w-64"
+                className="pl-10 pr-4 py-2 bg-white/5 border border-white/10 rounded-full text-2xl focus:outline-none focus:border-sky-500/50 transition-all w-64"
                 value={searchQuery}
                 onChange={handleSearchChange}
               />
             </div>
             <div className="px-4 py-2 glass-morphism rounded-full border border-white/5 flex items-center gap-2">
               <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-              <span className="text-sm font-medium">Agent Active</span>
+              <span className="text-2xl font-medium">Agent Active</span>
             </div>
           </div>
         </header>
@@ -257,9 +257,9 @@ function App() {
                   <div className="flex justify-between items-center mb-6">
                     <h3 className="text-xl font-bold flex items-center gap-2">
                       {isCriticalFilter ? 'Critical BP Patients' : selectedGender ? `${selectedGender} Patients` : 'Recent Admissions'}
-                      {(selectedGender || isCriticalFilter) && <span className="text-xs px-2 py-0.5 bg-sky-500/20 text-sky-400 rounded-full">Filtered</span>}
+                      {(selectedGender || isCriticalFilter) && <span className="text-xl px-2 py-0.5 bg-sky-500/20 text-sky-400 rounded-full">Filtered</span>}
                     </h3>
-                    <button onClick={() => setActiveTab('records')} className="text-sky-400 text-sm hover:underline">View All Records</button>
+                    <button onClick={() => setActiveTab('records')} className="text-sky-400 text-2xl hover:underline">View All Records</button>
                   </div>
                   <PatientList
                     patients={recentPatients.slice(0, 10)}
@@ -277,7 +277,7 @@ function App() {
                     <BrainCircuit size={20} className="text-indigo-400" />
                     Agentic Analysis
                   </h3>
-                  <p className="text-sm text-slate-400 mb-6">AI analysis is automatically triggered for every patient admission to assist diagnosis.</p>
+                  <p className="text-2xl text-slate-400 mb-6">AI analysis is automatically triggered for every patient admission to assist diagnosis.</p>
                   <button
                     onClick={() => setActiveTab('new-patient')}
                     className="w-full py-4 bg-indigo-500 hover:bg-indigo-600 text-white rounded-2xl font-bold transition-all shadow-lg shadow-indigo-500/20 flex items-center justify-center gap-2"
@@ -350,7 +350,7 @@ function App() {
             >
               <div className="flex justify-between items-center mb-8">
                 <h3 className="text-2xl font-bold text-white">Clinical Records History</h3>
-                <div className="text-slate-400 text-sm">Showing page {currentPage} of {totalPages}</div>
+                <div className="text-slate-400 text-2xl">Showing page {currentPage} of {totalPages}</div>
               </div>
               <PatientList
                 patients={recentPatients}
@@ -382,21 +382,21 @@ function App() {
               <div className="w-6 h-6 bg-sky-500 rounded flex items-center justify-center">
                 <Activity size={12} className="text-white" />
               </div>
-              <span className="text-sm font-bold gradient-text">MediAgent AI v1.0</span>
+              <span className="text-2xl font-bold gradient-text">MediAgent AI v1.0</span>
             </div>
 
             <div className="text-center md:text-left">
-              <p className="text-xs text-slate-500 mb-1 uppercase tracking-widest font-bold">Contact & Support</p>
-              <a href="mailto:2022d1r020@mietjammu.in" className="text-sm text-sky-400 hover:text-sky-300 transition-colors font-medium">
+              <p className="text-xl text-slate-500 mb-1 uppercase tracking-widest font-bold">Contact & Support</p>
+              <a href="mailto:2022d1r020@mietjammu.in" className="text-2xl text-sky-400 hover:text-sky-300 transition-colors font-medium">
                 2022d1r020@mietjammu.in
               </a>
             </div>
 
             <div className="text-center md:text-right">
-              <p className="text-[10px] text-slate-500 font-medium">
+              <p className="text-sm text-slate-500 font-medium">
                 &copy; {new Date().getFullYear()} MediAgent Health Systems. All rights reserved.
               </p>
-              <p className="text-[10px] text-slate-600 mt-1 italic">
+              <p className="text-sm text-slate-600 mt-1 italic">
                 Designed for clinical excellence and AI-driven healthcare.
               </p>
             </div>
@@ -413,7 +413,7 @@ function ProgressBar({ label, percentage, color, onClick, isFiltered }) {
       className={`space-y-1.5 cursor-pointer transition-all p-2 rounded-xl ${isFiltered ? 'bg-white/5 ring-1 ring-white/10' : 'hover:bg-white/[0.02]'}`}
       onClick={onClick}
     >
-      <div className="flex justify-between text-xs font-semibold">
+      <div className="flex justify-between text-xl font-semibold">
         <span className="text-slate-400 uppercase">{label}</span>
         <span className="text-white">{Math.round(percentage)}%</span>
       </div>
@@ -460,7 +460,7 @@ function StatCard({ title, value, icon, color = "sky", onClick, isActive }) {
         {icon}
       </div>
       <div>
-        <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">{title}</p>
+        <p className="text-sm text-slate-400 uppercase tracking-widest font-bold">{title}</p>
         <div className="text-2xl font-bold text-white mt-0.5">
           <CountUp value={value} />
         </div>

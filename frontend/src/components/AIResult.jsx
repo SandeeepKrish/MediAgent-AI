@@ -39,16 +39,16 @@ export default function AIResult({ result, isLoading, patient }) {
             {patient && (
                 <div className="glass-morphism p-6 rounded-2xl flex items-center justify-between border-l-4 border-l-sky-500">
                     <div>
-                        <h4 className="text-sm font-semibold text-slate-400 uppercase">Analysis for</h4>
+                        <h4 className="text-3xl font-semibold text-slate-400 uppercase">Analysis for</h4>
                         <div className="flex items-center gap-3 mt-1">
                             <span className="text-2xl font-bold">{patient.name}</span>
-                            <span className="px-2 py-0.5 bg-white/5 rounded-md text-sm border border-white/10">{patient.age}y</span>
-                            <span className="px-2 py-0.5 bg-white/5 rounded-md text-sm border border-white/10">{patient.gender}</span>
+                            <span className="px-2 py-0.5 bg-white/5 rounded-md text-3xl border border-white/10">{patient.age}y</span>
+                            <span className="px-2 py-0.5 bg-white/5 rounded-md text-3xl border border-white/10">{patient.gender}</span>
                         </div>
                     </div>
                     <div className="text-right">
-                        <p className="text-xs text-slate-400">Timestamp</p>
-                        <p className="text-sm font-medium">{new Date().toLocaleString()}</p>
+                        <p className="text-2xl text-slate-400">Timestamp</p>
+                        <p className="text-3xl font-medium">{new Date().toLocaleString()}</p>
                     </div>
                 </div>
             )}
@@ -67,7 +67,7 @@ export default function AIResult({ result, isLoading, patient }) {
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold">Likely Condition</h3>
-                                <p className="text-slate-400 text-sm">AI Agent Primary Inference</p>
+                                <p className="text-slate-400 text-3xl">AI Agent Primary Inference</p>
                             </div>
                         </div>
 
@@ -141,7 +141,7 @@ export default function AIResult({ result, isLoading, patient }) {
                     <div className="mt-8 pt-6 border-t border-white/5 space-y-4">
                         <div className="flex items-start gap-3">
                             <AlertCircle className="text-amber-400 shrink-0 mt-0.5" size={18} />
-                            <p className="text-xs text-slate-400 italic">
+                            <p className="text-2xl text-slate-400 italic">
                                 Disclaimer: The AI generated suggestions are based on historical data. Final decision must be made by a licensed medical professional.
                             </p>
                         </div>
