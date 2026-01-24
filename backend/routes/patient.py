@@ -73,21 +73,26 @@ async def list_patients(page: int = 1, limit: int = 10, search: str = "", gender
     
     query = {}
     if search:
-        # Case-insensitive partial match search for name
         query["name"] = {"$regex": search, "$options": "i"}
     
     if gender:
         query["gender"] = gender
         
     if critical:
+<<<<<<< HEAD
         # Regex to find systolic readings > 140 (approximate for string format "120/80")
         # Matches patterns starting with 14[1-9], 1[5-9][0-9], or digits > 200
+=======
+>>>>>>> 084508b (Fix UI consistency across browsers and restore original font sizes while keeping new features)
         query["bp"] = {"$regex": "^(14[1-9]|1[5-9][0-9]|[2-9][0-9]{2})/"}
         
     total = await db.patients.count_documents(query)
     patients = await db.patients.find(query).sort("created_at", -1).skip(skip).limit(limit).to_list(limit)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 084508b (Fix UI consistency across browsers and restore original font sizes while keeping new features)
     
     for p in patients:
         p["_id"] = str(p["_id"])

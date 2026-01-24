@@ -13,10 +13,12 @@ const API_BASE_URL = 'http://localhost:8000/api'
 function App() {
   const [activeTab, setActiveTab] = useState('dashboard')
   const [recentPatients, setRecentPatients] = useState([])
+
   const [analysisResult, setAnalysisResult] = useState(null)
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const [selectedPatient, setSelectedPatient] = useState(null)
   const [stats, setStats] = useState({ total: 0, male: 0, female: 0, critical: 0 })
+
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
   const [searchQuery, setSearchQuery] = useState('')
@@ -53,7 +55,6 @@ function App() {
     }
   }
 
-  // Use Debounce for searching: updates the list as the user types
   const debouncedSearch = useDebounce((query) => {
     setCurrentPage(1) // Reset to first page on search
     fetchPatients(1, query, selectedGender, isCriticalFilter)
@@ -226,7 +227,7 @@ function App() {
                     title="Total"
                     value={stats.total}
                     icon={<Database className="text-sky-400" />}
-                    isActive={selectedGender === ''}
+                    isActive={selectedGender === '' && !isCriticalFilter}
                     onClick={() => handleGenderFilter('')}
                   />
                   <StatCard
@@ -255,11 +256,10 @@ function App() {
 
                 <section className="glass-morphism rounded-3xl p-6">
                   <div className="flex justify-between items-center mb-6">
-                    <h3 className="text-xl font-bold flex items-center gap-2">
+                    <h3 className="text-xl font-bold">
                       {isCriticalFilter ? 'Critical BP Patients' : selectedGender ? `${selectedGender} Patients` : 'Recent Admissions'}
-                      {(selectedGender || isCriticalFilter) && <span className="text-xl px-2 py-0.5 bg-sky-500/20 text-sky-400 rounded-full">Filtered</span>}
                     </h3>
-                    <button onClick={() => setActiveTab('records')} className="text-sky-400 text-2xl hover:underline">View All Records</button>
+                    <button onClick={() => setActiveTab('records')} className="text-sky-400 text-sm hover:underline">View All Records</button>
                   </div>
                   <PatientList
                     patients={recentPatients.slice(0, 10)}
@@ -410,10 +410,10 @@ function App() {
 function ProgressBar({ label, percentage, color, onClick, isFiltered }) {
   return (
     <div
-      className={`space-y-1.5 cursor-pointer transition-all p-2 rounded-xl ${isFiltered ? 'bg-white/5 ring-1 ring-white/10' : 'hover:bg-white/[0.02]'}`}
+      className={`space-y-1.5 cursor-pointer p-2 rounded-lg transition-all ${isFiltered ? 'bg-white/10 ring-1 ring-white/10' : 'hover:bg-white/5'}`}
       onClick={onClick}
     >
-      <div className="flex justify-between text-xl font-semibold">
+      <div className="flex justify-between text-xs font-semibold">
         <span className="text-slate-400 uppercase">{label}</span>
         <span className="text-white">{Math.round(percentage)}%</span>
       </div>
@@ -454,7 +454,7 @@ function StatCard({ title, value, icon, color = "sky", onClick, isActive }) {
   return (
     <div
       onClick={onClick}
-      className={`glass-morphism p-5 rounded-2xl flex flex-col gap-4 border cursor-pointer transition-all ${isActive ? 'ring-2 ring-sky-500/50 border-sky-500/50 scale-[1.02]' : 'hover:scale-105'} ${colorMap[color] || colorMap.sky}`}
+      className={`glass-morphism p-5 rounded-2xl flex flex-col gap-4 border cursor-pointer transition-all ${isActive ? 'ring-2 ring-sky-500/50' : 'hover:scale-105'} ${colorMap[color] || colorMap.sky}`}
     >
       <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
         {icon}
