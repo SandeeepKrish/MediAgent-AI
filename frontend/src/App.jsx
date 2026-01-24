@@ -4,7 +4,7 @@ import PatientForm from './components/PatientForm'
 import AIResult from './components/AIResult'
 import PatientList from './components/PatientList'
 import ContactForm from './components/ContactForm'
-import { Activity, LayoutDashboard, Database, BrainCircuit, UserPlus, History, MessageSquare, Search } from 'lucide-react'
+import { Activity, LayoutDashboard, Database, BrainCircuit, UserPlus, History, MessageSquare, Search, Menu, X } from 'lucide-react'
 import { motion, AnimatePresence, useSpring, useTransform, animate } from 'framer-motion'
 import { useDebounce, useThrottle } from './hooks/useUtils'
 
@@ -24,6 +24,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedGender, setSelectedGender] = useState('')
   const [isCriticalFilter, setIsCriticalFilter] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     // Fire both immediately for fast loading
@@ -128,6 +129,66 @@ function App() {
       <div className="hero-pulse top-0 left-0" />
       <div className="hero-pulse bottom-0 right-0 bg-indigo-500/10" />
 
+      {/* Mobile Header */}
+      <div className="lg:hidden fixed top-0 left-0 w-full glass-morphism border-b border-white/5 z-50 p-4 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <img src="/favicon.svg" alt="Logo" className="w-8 h-8" />
+          <h1 className="text-lg font-bold gradient-text">MediAgent</h1>
+        </div>
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="p-2 bg-white/5 rounded-lg text-sky-400"
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="fixed inset-0 z-40 lg:hidden glass-morphism bg-[#0f172a]/95 backdrop-blur-xl p-8 pt-24"
+          >
+            <nav className="space-y-4">
+              <SidebarItem
+                icon={<LayoutDashboard size={24} />}
+                label="Dashboard"
+                active={activeTab === 'dashboard'}
+                onClick={() => { setActiveTab('dashboard'); setIsMenuOpen(false); }}
+              />
+              <SidebarItem
+                icon={<UserPlus size={24} />}
+                label="New Patient"
+                active={activeTab === 'new-patient'}
+                onClick={() => { setActiveTab('new-patient'); setIsMenuOpen(false); }}
+              />
+              <SidebarItem
+                icon={<BrainCircuit size={24} />}
+                label="AI Analysis"
+                active={activeTab === 'analysis'}
+                onClick={() => { setActiveTab('analysis'); setIsMenuOpen(false); }}
+              />
+              <SidebarItem
+                icon={<History size={24} />}
+                label="Records"
+                active={activeTab === 'records'}
+                onClick={() => { setActiveTab('records'); setIsMenuOpen(false); }}
+              />
+              <SidebarItem
+                icon={<MessageSquare size={24} />}
+                label="Contact Us"
+                active={activeTab === 'contact'}
+                onClick={() => { setActiveTab('contact'); setIsMenuOpen(false); }}
+              />
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Sidebar */}
       <aside className="fixed left-0 top-0 h-full w-64 glass-morphism border-r border-white/5 z-50 hidden lg:flex flex-col">
         <div className="p-8 flex items-center gap-3">
@@ -179,7 +240,7 @@ function App() {
       </aside>
 
       {/* Main Content */}
-      <main className="lg:ml-64 p-8 min-h-screen">
+      <main className="lg:ml-64 p-4 lg:p-8 min-h-screen pt-24 lg:pt-8">
         <header className="flex justify-between items-center mb-10">
           <div>
             <h2 className="text-3xl font-bold text-white">
