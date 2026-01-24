@@ -40,9 +40,9 @@ function App() {
   }
 
 
-  const fetchPatients = async (page = 1) => {
+  const fetchPatients = async (page = 1, search = '') => {
     try {
-      const res = await axios.get(`${API_BASE_URL}/patients/?page=${page}&limit=10`)
+      const res = await axios.get(`${API_BASE_URL}/patients/?page=${page}&limit=10&search=${search}`)
       setRecentPatients(res.data.patients)
       setTotalPages(res.data.total_pages)
       setStats(prev => ({ ...prev, total: res.data.total }))
@@ -51,10 +51,10 @@ function App() {
     }
   }
 
-  // Use Debounce for searching (though backend search isn't implemented, this shows the technique)
+  // Use Debounce for searching: updates the list as the user types
   const debouncedSearch = useDebounce((query) => {
-    console.log("Searching for:", query)
-    // Here you would call an API with the search query
+    setCurrentPage(1) // Reset to first page on search
+    fetchPatients(1, query)
   }, 500)
 
   const handleSearchChange = (e) => {

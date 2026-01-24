@@ -68,12 +68,20 @@ async def get_stats(db: AsyncIOMotorDatabase = Depends(get_database)):
 
 
 @router.get("/", response_model=dict)
-async def list_patients(page: int = 1, limit: int = 10, db: AsyncIOMotorDatabase = Depends(get_database)):
+async def list_patients(page: int = 1, limit: int = 10, search: str = "", db: AsyncIOMotorDatabase = Depends(get_database)):
     skip = (page - 1) * limit
-    total = await db.patients.count_documents({})
-    patients = await db.patients.find().sort("created_at", -1).skip(skip).limit(limit).to_list(limit)
+    
+    query = {}
+    if search:
+        # Case-insensitive partial match search for name
+        query["name"] = {"$regex": search, "$options": "i"}
+        
+    total = await db.patients.count_documents(query)
+    patients = await db.patients.find(query).sort("created_at", -1).skip(skip).limit(limit).to_list(limit)
+    
     for p in patients:
         p["_id"] = str(p["_id"])
+        
     return {
         "patients": patients,
         "total": total,
@@ -81,6 +89,7 @@ async def list_patients(page: int = 1, limit: int = 10, db: AsyncIOMotorDatabase
         "limit": limit,
         "total_pages": (total + limit - 1) // limit
     }
+
 
 
 @router.get("/{patient_id}", response_model=dict)
