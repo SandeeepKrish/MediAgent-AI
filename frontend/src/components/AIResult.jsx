@@ -1,110 +1,118 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrainCircuit, CheckCircle2, AlertCircle, Stethoscope, Pill, ShieldCheck, Loader2, Printer } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import jsPDF from 'jspdf'
 import 'jspdf-autotable'
 
 export default function AIResult({ result, isLoading, patient }) {
+    const [isPrinting, setIsPrinting] = useState(false);
+
     const generatePDF = () => {
         if (!result || !patient) return;
 
-        const doc = new jsPDF();
-        const timestamp = new Date().toLocaleString();
+        setIsPrinting(true);
 
-        // 1. Header with Logo (Using text for now as logo is SVG, but formatted to look like branding)
-        doc.setFillColor(15, 23, 42); // Dark background like the UI
-        doc.rect(0, 0, 210, 40, 'F');
+        // Simulate a 2-second generation/processing time as requested
+        setTimeout(() => {
+            const doc = new jsPDF();
+            const timestamp = new Date().toLocaleString();
 
-        doc.setTextColor(255, 255, 255);
-        doc.setFontSize(24);
-        doc.setFont('helvetica', 'bold');
-        doc.text("MEDI AGENT AI", 20, 25);
+            // 1. Header with Logo (Using text for now as logo is SVG, but formatted to look like branding)
+            doc.setFillColor(15, 23, 42); // Dark background like the UI
+            doc.rect(0, 0, 210, 40, 'F');
 
-        doc.setFontSize(10);
-        doc.setFont('helvetica', 'normal');
-        doc.text("Advanced Diagnostic Support System", 20, 32);
+            doc.setTextColor(255, 255, 255);
+            doc.setFontSize(24);
+            doc.setFont('helvetica', 'bold');
+            doc.text("MEDI AGENT AI", 20, 25);
 
-        // 2. Patient Info Section
-        doc.setTextColor(0, 0, 0);
-        doc.setFontSize(14);
-        doc.setFont('helvetica', 'bold');
-        doc.text("PATIENT INFORMATION", 20, 55);
+            doc.setFontSize(10);
+            doc.setFont('helvetica', 'normal');
+            doc.text("Advanced Diagnostic Support System", 20, 32);
 
-        doc.setLineWidth(0.5);
-        doc.line(20, 58, 190, 58);
+            // 2. Patient Info Section
+            doc.setTextColor(0, 0, 0);
+            doc.setFontSize(14);
+            doc.setFont('helvetica', 'bold');
+            doc.text("PATIENT INFORMATION", 20, 55);
 
-        doc.setFontSize(11);
-        doc.setFont('helvetica', 'normal');
-        doc.text(`Name: ${patient.name}`, 20, 68);
-        doc.text(`Age: ${patient.age}y`, 80, 68);
-        doc.text(`Gender: ${patient.gender}`, 130, 68);
-        doc.text(`Analysis Date: ${timestamp}`, 20, 75);
+            doc.setLineWidth(0.5);
+            doc.line(20, 58, 190, 58);
 
-        // 3. Likely Condition
-        doc.setFontSize(14);
-        doc.setFont('helvetica', 'bold');
-        doc.text("CONSULTATION SUMMARY", 20, 90);
+            doc.setFontSize(11);
+            doc.setFont('helvetica', 'normal');
+            doc.text(`Name: ${patient.name}`, 20, 68);
+            doc.text(`Age: ${patient.age}y`, 80, 68);
+            doc.text(`Gender: ${patient.gender}`, 130, 68);
+            doc.text(`Analysis Date: ${timestamp}`, 20, 75);
 
-        doc.setLineWidth(0.5);
-        doc.line(20, 93, 190, 93);
+            // 3. Likely Condition
+            doc.setFontSize(14);
+            doc.setFont('helvetica', 'bold');
+            doc.text("CONSULTATION SUMMARY", 20, 90);
 
-        doc.setFontSize(12);
-        doc.setTextColor(14, 165, 233); // Sky-500 color
-        doc.text(`Likely Condition: ${result.possible_condition}`, 20, 103);
+            doc.setLineWidth(0.5);
+            doc.line(20, 93, 190, 93);
 
-        doc.setFontSize(10);
-        doc.setTextColor(60, 60, 60);
-        const splitSummary = doc.splitTextToSize(`Agent Analysis: ${result.ai_analysis_summary}`, 170);
-        doc.text(splitSummary, 20, 110);
+            doc.setFontSize(12);
+            doc.setTextColor(14, 165, 233); // Sky-500 color
+            doc.text(`Likely Condition: ${result.possible_condition}`, 20, 103);
 
-        // 4. Suggested Tests & Precautions (Tables or Lists)
-        doc.setFontSize(12);
-        doc.setTextColor(0, 0, 0);
-        doc.setFont('helvetica', 'bold');
-        doc.text("Suggested Tests", 20, 135);
+            doc.setFontSize(10);
+            doc.setTextColor(60, 60, 60);
+            const splitSummary = doc.splitTextToSize(`Agent Analysis: ${result.ai_analysis_summary}`, 170);
+            doc.text(splitSummary, 20, 110);
 
-        let yPos = 142;
-        doc.setFont('helvetica', 'normal');
-        doc.setFontSize(10);
-        result.suggested_tests.forEach(test => {
-            doc.text(`• ${test}`, 25, yPos);
+            // 4. Suggested Tests & Precautions (Tables or Lists)
+            doc.setFontSize(12);
+            doc.setTextColor(0, 0, 0);
+            doc.setFont('helvetica', 'bold');
+            doc.text("Suggested Tests", 20, 135);
+
+            let yPos = 142;
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(10);
+            result.suggested_tests.forEach(test => {
+                doc.text(`• ${test}`, 25, yPos);
+                yPos += 7;
+            });
+
+            yPos += 5;
+            doc.setFontSize(12);
+            doc.setFont('helvetica', 'bold');
+            doc.text("Precautionary Measures", 20, yPos);
             yPos += 7;
-        });
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(10);
+            result.precautionary_measures.forEach(measure => {
+                doc.text(`• ${measure}`, 25, yPos);
+                yPos += 7;
+            });
 
-        yPos += 5;
-        doc.setFontSize(12);
-        doc.setFont('helvetica', 'bold');
-        doc.text("Precautionary Measures", 20, yPos);
-        yPos += 7;
-        doc.setFont('helvetica', 'normal');
-        doc.setFontSize(10);
-        result.precautionary_measures.forEach(measure => {
-            doc.text(`• ${measure}`, 25, yPos);
-            yPos += 7;
-        });
+            // 5. Recommended Dosage
+            yPos += 10;
+            doc.setFillColor(244, 63, 94, 0.1); // Rose-500 light alpha
+            doc.rect(20, yPos, 170, 20, 'F');
+            doc.setTextColor(190, 18, 60); // Rose-700
+            doc.setFont('helvetica', 'bold');
+            doc.text("RECOMMENDED DOSAGE", 25, yPos + 8);
+            doc.setFont('helvetica', 'normal');
+            doc.text(result.dosage_recommendation, 25, yPos + 15);
 
-        // 5. Recommended Dosage
-        yPos += 10;
-        doc.setFillColor(244, 63, 94, 0.1); // Rose-500 light alpha
-        doc.rect(20, yPos, 170, 20, 'F');
-        doc.setTextColor(190, 18, 60); // Rose-700
-        doc.setFont('helvetica', 'bold');
-        doc.text("RECOMMENDED DOSAGE", 25, yPos + 8);
-        doc.setFont('helvetica', 'normal');
-        doc.text(result.dosage_recommendation, 25, yPos + 15);
+            // 6. Footer Disclaimer & Border
+            doc.setDrawColor(200, 200, 200);
+            doc.setLineWidth(0.2);
+            doc.line(20, 275, 190, 275); // Bottom border line
 
-        // 6. Footer Disclaimer & Border
-        doc.setDrawColor(200, 200, 200);
-        doc.setLineWidth(0.2);
-        doc.line(20, 275, 190, 275); // Bottom border line
+            doc.setTextColor(150, 150, 150);
+            doc.setFontSize(8);
+            doc.setFont('helvetica', 'italic');
+            doc.text("Disclaimer: This report is generated by AI and must be validated by a professional.", 105, 282, { align: 'center' });
+            doc.text("MediAgent AI Health Systems - Confidential", 105, 288, { align: 'center' });
 
-        doc.setTextColor(150, 150, 150);
-        doc.setFontSize(8);
-        doc.setFont('helvetica', 'italic');
-        doc.text("Disclaimer: This report is generated by AI and must be validated by a professional.", 105, 282, { align: 'center' });
-        doc.text("MediAgent AI Health Systems - Confidential", 105, 288, { align: 'center' });
-
-        doc.save(`${patient.name}_Health_Report.pdf`);
+            doc.save(`${patient.name}_Health_Report.pdf`);
+            setIsPrinting(false);
+        }, 2000);
     };
 
     if (isLoading) {
@@ -251,10 +259,23 @@ export default function AIResult({ result, isLoading, patient }) {
                         </div>
                         <button
                             onClick={generatePDF}
-                            className="w-full py-3 bg-white text-slate-900 rounded-xl font-bold hover:bg-slate-200 transition-colors flex items-center justify-center gap-2"
+                            disabled={isPrinting}
+                            className={`w-full py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-2 ${isPrinting
+                                    ? 'bg-slate-700 text-slate-400 cursor-not-allowed'
+                                    : 'bg-white text-slate-900 hover:bg-slate-200 active:scale-95'
+                                }`}
                         >
-                            <Printer size={18} />
-                            Print Report
+                            {isPrinting ? (
+                                <>
+                                    <Loader2 className="animate-spin" size={18} />
+                                    <span>Generating Report...</span>
+                                </>
+                            ) : (
+                                <>
+                                    <Printer size={18} />
+                                    <span>Print Report</span>
+                                </>
+                            )}
                         </button>
                     </div>
                 </motion.section>
@@ -262,4 +283,5 @@ export default function AIResult({ result, isLoading, patient }) {
         </div>
     )
 }
+
 
