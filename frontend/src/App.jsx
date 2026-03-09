@@ -450,9 +450,14 @@ function App() {
 
             <div className="text-center md:text-left">
               <p className="text-xl text-slate-500 mb-1 uppercase tracking-widest font-bold">Contact & Support</p>
-              <a href="mailto:2022d1r020@mietjammu.in" className="text-2xl text-sky-400 hover:text-sky-300 transition-colors font-medium">
-                2022d1r020@mietjammu.in
-              </a>
+              <div className="flex flex-col gap-1">
+                <a href="mailto:2022dir020@mietjammu.in" className="text-2xl text-sky-400 hover:text-sky-300 transition-colors font-medium">
+                  2022dir020@mietjammu.in
+                </a>
+                <a href="tel:9682548514" className="text-xl text-slate-400 hover:text-sky-400 transition-colors font-medium">
+                  +91 96825 48514
+                </a>
+              </div>
             </div>
 
             <div className="text-center md:text-right">
